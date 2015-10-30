@@ -1,0 +1,79 @@
+1
+00:00:01,000 --> 00:00:06,900
+Hallo - In diesem Video moechte ich zeigen wie man die Groesse der Videobilder veraendern kann
+
+2
+00:00:07,000 --> 00:00:12,900
+Ich bin im Persoenlichen Ordner und habe hier ein Video namens c.webm
+
+3
+00:00:13,000 --> 00:00:19,900
+mit der Groesse 1280x1024 Pixel
+
+4
+00:00:20,000 --> 00:00:27,900
+und mit dem Tool ffmpeg kann ich nun die Groesse der Frames beeinflussen
+
+5
+00:00:28,000 --> 00:00:43,900
+mit der Eingabe ffmpeg -i c.webm (eine Bild- oder Videodatei)
+
+6
+00:00:44,000 --> 00:01:00,900
+-s 640x480 (die neue Groesse angeben, Breite 640 Pixel, Hoehe 480 Pixel)
+
+7
+00:01:01,000 --> 00:01:07,900
+am Ende die Ergebnisdatei, die nenne ich einfach mal a.webm
+
+8
+00:01:10,000 --> 00:01:21,900
+und hier ist die neue Datei mit der Groesse 640x480
+
+9
+00:01:22,000 --> 00:01:27,900
+Ebenso geht das auch mit dem Videofilter scale
+
+10
+00:01:28,000 --> 00:01:41,900
+und zwar sieht die Eingabe dann so aus: ffmpeg -i c.webm -vf (fuer den Videofilter)
+
+11
+00:01:42,000 --> 00:02:03,900
+"scale=640:480" (Breite 640 Pixel:Hoehe 480 Pixel) und am Ende die Ergebnisdatei b.webm
+
+12
+00:02:04,000 --> 00:02:23,900
+da ist die Datei, das war die falsche, b.webm 640x480
+
+13
+00:02:24,000 --> 00:02:33,900
+Ebenso gibt es auch noch Variablen z.B. iw fuer die Breite, ih fuer die Hoehe (Inputdatei)
+
+14
+00:02:34,000 --> 00:02:44,900
+ow fuer die Breite, oh fuer die Hoehe (Outputdatei)
+
+15
+00:02:45,000 --> 00:03:03,900
+so koennte es aussehen - ffmpeg -i c.webm -vf "scale=iw/2:ih/2" d.webm
+
+16
+00:03:04,000 --> 00:03:19,900
+also die Breite 1280 wird durch 2 geteilt und ebenso die Hoehe 1024 wird auch durch 2 geteilt
+
+17
+00:03:20,000 --> 00:03:24,900
+die Ergebnisdatei soll heissen d.webm
+
+18
+00:03:27,000 --> 00:03:39,900
+OK - Breite 640 Pixel, Hoehe 512 Pixel
+
+19
+00:03:41,000 --> 00:03:43,900
+Tschau und viel Glueck
+
+20
+00:03:44,000 --> 00:03:44,001
+Lizenz der Untertitel-Datei: http://creativecommons.org/licenses/by/3.0/
