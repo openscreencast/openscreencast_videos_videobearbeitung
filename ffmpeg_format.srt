@@ -1,0 +1,71 @@
+1
+00:00:05,000 --> 00:00:14,900
+Hallo - In diesem Video moechte ich einen weiteren ffmpeg-Videofilter vorstellen, und zwar den Videofilter format
+
+2
+00:00:15,000 --> 00:00:18,900
+mit diesem Videofilter kann man das Pixelformat aendern, und das geht wie folgt
+
+3
+00:00:19,000 --> 00:00:27,900
+ich bin im Verzeichnis Videos, habe hier ein Video und ein Bild, fuer mein Beispiel werde ich aber nur das Bild benutzen
+
+4
+00:00:28,000 --> 00:00:34,900
+ich oeffne ein Terminal, wechsle ins Verzeichnis Videos, cd Videos ENTER
+
+5
+00:00:35,000 --> 00:00:45,900
+und jetzt gebe ich ein ffmpeg -i (-i fuer die Input-Videodatei, das ist das Bild b.jpg)
+
+6
+00:00:46,000 --> 00:00:59,900
+-vf, so gibt man den Videofilter an, das ist hier "format=monob" - ein Pixelformat
+
+7
+00:01:00,000 --> 00:01:07,900
+am Ende kommt die Ergebnisdatei, die nenne ich einfach mal b.png
+
+8
+00:01:08,000 --> 00:01:24,900
+mit diesem Pixelformat ist es moeglich dass das Bild, die Frames von den Videos, nur noch in schwarz/weiss angezeigt werden
+
+9
+00:01:25,000 --> 00:01:28,900
+also es sind lediglich schwarze Punkte und weisse Punkte
+
+10
+00:01:29,000 --> 00:01:35,900
+Was fuer Pixelformate gibt es eigentlich ?
+
+11
+00:01:36,000 --> 00:01:48,900
+das kann man sich anzeigen lassen, und zwar mit dem Befehl ffmpeg -pix_fmts
+
+12
+00:01:49,000 --> 00:02:00,900
+oder es geht auch mit dem Befehl ffmpeg -pix_fmt list
+
+13
+00:02:01,000 --> 00:02:03,900
+das sind dann die ganzen Pixelformate
+
+14
+00:02:04,000 --> 00:02:21,900
+z.B. ein anderes Pixelformat waere gray, so wird das Bild, bzw. die Frames der Videos, in Grautoenen angezeigt
+
+15
+00:02:25,000 --> 00:02:35,900
+aber ffmpeg hat um ein Pixelformat zu aendern auch eine Option, also ein Videofilter ist hier eigentlich nicht notwendig
+
+16
+00:02:36,000 --> 00:03:15,900
+und diese Option wendet man wie folgt an, man gibt ein ffmpeg -i b.jpg (die Inputdatei) -pix_fmt monob (das Pixelformat) b.png
+
+17
+00:03:30,000 --> 00:03:33,900
+Tschau und viel Glueck
+
+18
+00:03:34,000 --> 00:03:34,001
+Lizenz der Untertitel-Datei: http://creativecommons.org/licenses/by/3.0/
