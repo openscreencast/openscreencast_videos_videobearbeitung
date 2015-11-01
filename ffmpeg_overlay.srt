@@ -1,0 +1,111 @@
+1
+00:00:05,000 --> 00:00:08,900
+Hallo - Ein Logo im Video anzeigen lassen
+
+2
+00:00:09,000 --> 00:00:15,900
+Mit ffmpeg und dem Videofilter overlay ist man in der Lage ein Logo ins Video zu zaubern
+
+3
+00:00:16,000 --> 00:00:18,900
+Ich bin im Verzeichnis Videos
+
+4
+00:00:19,000 --> 00:00:25,900
+und habe hier 2 Dateien, zum einen die Datei a.ogv, das ist die Input-Video-Datei
+
+5
+00:00:26,000 --> 00:00:29,900
+das Video ist 1280x720 Pixel gross
+
+6
+00:00:30,000 --> 00:00:38,900
+und zum anderen habe ich hier die Bilddatei logo.png, das Bild ist 50x50 Pixel gross
+
+7
+00:00:39,000 --> 00:00:44,900
+und dieses Bild, dieses Logo soll nun in dieses Video gezaubert werden
+
+8
+00:00:45,000 --> 00:00:54,900
+Ich oeffne ein Terminal und wechsle ins Verzeichnis Videos, cd Videos ENTER
+
+9
+00:00:55,000 --> 00:01:03,900
+und gebe ein ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo] overlay=10:10 [out]" b.webm
+
+10
+00:01:04,000 --> 00:01:05,900
+-i a.ogv, das ist die Input-Video-Datei
+
+11
+00:01:06,000 --> 00:01:33,900
+-vf "", so wird der Videofilter festgelegt, movie=logo.png [logo]; - das ist die Bilddatei
+
+12
+00:01:34,000 --> 00:01:56,900
+[in][logo] overlay=10:10, durch overlay=x:y kann man die Stelle festlegen wo das Logo erscheinen soll
+
+13
+00:01:57,000 --> 00:02:05,900
+z.B. overlay=10:10, so wird das Logo oben links in der Ecke angezeigt
+
+14
+00:02:06,000 --> 00:02:30,900
+[out] - fuer Output, und dann kommt die Output-Video-Datei mit dem Namen b.webm, also im Video-Format webm
+
+15
+00:02:31,000 --> 00:02:40,900
+dann ENTER, so wird der Befehl ausgefuehrt mit dem Tool ffmpeg und dem Videofilter overlay
+
+16
+00:02:41,000 --> 00:02:53,900
+und hier ist das Ergebnis, das Logo ist oben links in der Ecke
+
+17
+00:02:54,000 --> 00:03:01,900
+die Input-Video-Datei, OK
+
+18
+00:03:02,000 --> 00:03:11,900
+Einige hilfreiche Variablen die eingesetzt werden koennen sind z.B. main_w, W fuer die Breite des Videos
+
+19
+00:03:12,000 --> 00:03:16,900
+main_h, H fuer die Hoehe des Videos
+
+20
+00:03:17,000 --> 00:03:27,900
+overlay_w, w fuer die Breite des Logos, overlay_h, h fuer die Hoehe des Logos, also fuer die Bilddatei
+
+21
+00:03:28,000 --> 00:03:56,900
+ein 2. Beispiel: ffmpeg -i a.ogv -vf "movie=logo.png [logo]; [in][logo] overlay=main_w-overlay_w-10:10 [out]" b2.webm
+
+22
+00:03:57,000 --> 00:04:04,900
+es aendert sich eigentlich nur die Stelle des Logos, statt 10:10
+
+23
+00:04:05,000 --> 00:04:15,900
+kommt jetzt hinter overlay= main_w fuer die Breite des Videos, 1280 Pixel
+
+24
+00:04:16,000 --> 00:04:26,900
+Minus overlay_w fuer die Breite des Logos, das sind 50 Pixel, und dann -10
+
+25
+00:04:27,000 --> 00:04:43,900
+OK, die Output-Video-Datei habe ich umbenannt in b2.webm
+
+26
+00:04:44,000 --> 00:04:55,900
+und schon ist das Logo oben rechts in der Ecke
+
+27
+00:05:00,000 --> 00:05:03,900
+Tschau und viel Glueck
+
+28
+00:05:04,000 --> 00:05:04,001
+Lizenz der Untertitel-Datei: http://creativecommons.org/licenses/by/3.0/

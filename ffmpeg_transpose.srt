@@ -1,0 +1,71 @@
+1
+00:00:05,000 --> 00:00:13,900
+Hallo - Herzlich Willkommen - In diesem Video moechte ich den Videofilter transpose von ffmpeg vorstellen
+
+2
+00:00:14,000 --> 00:00:18,900
+Mit diesem Videofilter kann man ein Video drehen oder ein Bild drehen
+
+3
+00:00:19,000 --> 00:00:22,900
+Ich bin im persoenlichen Ordner, im Verzeichnis Videos
+
+4
+00:00:23,000 --> 00:00:29,900
+und habe hier an Video namens a.ogv und ein Bild namens b.jpg
+
+5
+00:00:30,000 --> 00:00:34,900
+Jetzt moechte ich zeigen wie man dieses Video und dieses Bild drehen kann
+
+6
+00:00:35,000 --> 00:00:44,900
+Ich oeffne ein Terminal, gehe ins Verzeichnis Videos mit cd Videos ENTER
+
+7
+00:00:45,000 --> 00:00:47,900
+ls, hier ist mein Video und mein Bild
+
+8
+00:00:48,000 --> 00:00:57,900
+und jetzt gebe ich ein ffmpeg, das ist das eigentliche Tool, -i, so gibt man die Input-Datei an
+
+9
+00:00:58,000 --> 00:01:13,900
+das ist mein Video a.ogv, den Videofilter gibt man an mit -vf, der heisst transpose
+
+10
+00:01:14,000 --> 00:01:23,900
+=, jetzt nimmt man einen Wert, hier gibt es 4 Werte: 0 1 2 3, ich nehme hier mal 1
+
+11
+00:01:24,000 --> 00:01:30,900
+und jetzt kommt die Ergebnisdatei, die soll heissen b.webm
+
+12
+00:01:31,000 --> 00:01:38,900
+(ffmpeg -i a.ogv -vf "transpose=1" b.webm) ENTER, so wird der Befehl ausgefuehrt
+
+13
+00:01:39,000 --> 00:01:45,900
+die Ergebnisdatei kann man sich anschauen mit einem Doppelklick, so wird der Videoplayer gestartet
+
+14
+00:01:46,000 --> 00:01:51,900
+und das gleiche nochmal mit dem Bild
+
+15
+00:01:52,000 --> 00:02:02,900
+das Bild heisst b.jpg, hier aendere ich den transpose-Wert, ich nehme mal 2
+
+16
+00:02:03,000 --> 00:02:09,900
+und die Ergebnisdatei soll heissen b.png
+
+17
+00:02:14,000 --> 00:02:16,900
+Tschau und viel Glueck
+
+18
+00:02:17,001 --> 00:02:17,002
+Lizenz der Untertitel-Datei: http://creativecommons.org/licenses/by/3.0/

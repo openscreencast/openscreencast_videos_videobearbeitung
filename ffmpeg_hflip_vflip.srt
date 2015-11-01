@@ -1,0 +1,67 @@
+1
+00:00:05,000 --> 00:00:07,900
+Hallo - Videobilder spiegeln
+
+2
+00:00:08,000 --> 00:00:16,900
+Ich bin im Verzeichnis Videos, habe hier 2 Dateien, zum einen eine Videodatei a.ogv und zum anderen eine Bilddatei s.jpg
+
+3
+00:00:17,000 --> 00:00:19,900
+Wie kann ich diese Bilder nun spiegeln ?
+
+4
+00:00:20,000 --> 00:00:31,900
+Ganz einfach, ich oeffne ein Terminal, wechsle ins Verzeichnis Videos mit cd Videos ENTER
+
+5
+00:00:32,000 --> 00:00:39,900
+mit ls -l ENTER lasse ich mir alle Dateien im Verzeichnis anzeigen
+
+6
+00:00:40,000 --> 00:01:16,900
+jetzt kann ich die horizontale Spiegelung durchfuehren mit ffmpeg -i a.ogv -vf "hflip" b.webm
+
+7
+00:01:17,000 --> 00:01:24,900
+Das Ergebnis kann ich mir gleich anschauen
+
+8
+00:01:25,000 --> 00:01:31,900
+mit dem Videoplayer, ich mache einen Doppelklick auf die Ergebnisdatei
+
+9
+00:01:32,000 --> 00:01:39,900
+Das geht natuerlich auch mit einem Bild
+
+10
+00:01:40,000 --> 00:01:52,900
+so gebe ich einfach statt a.ogv den Namen der Bilddatei ein, ffmpeg -i s.jpg -vf "hflip" b.jpg
+
+11
+00:01:53,000 --> 00:02:00,900
+und die Ergebnisdatei nenne ich auch anders, b.jpg
+
+12
+00:02:01,000 --> 00:02:06,900
+das war die horizontale Spiegelung
+
+13
+00:02:07,000 --> 00:02:17,900
+das geht natuerlich auch vertikal, eine vertikale Spiegelung fuehrt man mit dem Videofilter vflip durch
+
+14
+00:02:18,000 --> 00:02:42,900
+ffmpeg -i a.ogv -vf "vflip" b2.webm
+
+15
+00:02:43,000 --> 00:02:57,900
+das gleiche auch mit dem Bild, ffmpeg -i s.jpg -vf "vflip" b2.jpg
+
+16
+00:02:58,000 --> 00:03:00,900
+Tschau und viel Glueck
+
+17
+00:03:01,000 --> 00:03:01,001
+Lizenz der Untertitel-Datei: http://creativecommons.org/licenses/by/3.0/
